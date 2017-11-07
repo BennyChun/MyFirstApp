@@ -1,92 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.bennychun_pc.myfirstapp.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
         android:id="@+id/totalTextView"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="68dp"
+        android:layout_marginTop="50dp"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        android:textSize="50sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         android:text="What Is?"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside"
-        tools:layout_editor_absoluteX="160dp" />
+        android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/percentageText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Enter Percentage"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="98dp" />
+        android:layout_marginTop="30dp"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/numberText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Enter Number"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="98dp" />
+        <EditText
+            android:id="@+id/percentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Percentage"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="98dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="%"
-        android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@+id/totalTextView"
-        tools:layout_editor_absoluteX="323dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:text="%"
+            android:textSize="30sp" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
         android:text="of"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageText"
         tools:layout_editor_absoluteX="193dp" />
+
+    <EditText
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Enter Number"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+
+
 
     <Button
         android:id="@+id/calcBtn"
         android:layout_width="213dp"
         android:layout_height="37dp"
+        android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:background="#e52828"
         android:text="CALCULATE"
         android:textColor="#FFFFFF"
         android:textColorLink="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/numberText"
-        tools:layout_editor_absoluteX="98dp" />
+        app:layout_constraintStart_toStartOf="@+id/numberText"
+        app:layout_constraintTop_toBottomOf="@+id/numberText" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
