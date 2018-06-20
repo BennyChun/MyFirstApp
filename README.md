@@ -1,0 +1,2 @@
+# MyFirstApp
+Simple percentage calculator
