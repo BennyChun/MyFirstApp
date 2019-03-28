@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
     public void testFunction(){
         System.out.println("Hello World!");
     }
+
+    public void test3Function(){
+        System.out.println("Hello World!");
+    }
+
+    public void test2Function(){
+        System.out.println("Hello World!");
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
